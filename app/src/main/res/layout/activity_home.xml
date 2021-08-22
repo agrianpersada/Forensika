@@ -16,7 +16,7 @@
         android:layout_marginRight="16dp"
         android:fontFamily="@font/mulibold"
         android:gravity="center_horizontal"
-        android:text="5 Tools Rekomendasi Terbaik"
+        android:text="5 Tools Terpopuler"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="24sp" />

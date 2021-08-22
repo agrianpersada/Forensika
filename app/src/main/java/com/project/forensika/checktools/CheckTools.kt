@@ -138,7 +138,7 @@ class CheckTools : AppCompatActivity(), BottomNavigationView.OnNavigationItemSel
         val alertDialog = builder.create()
         val pesan = view.findViewById<TextView>(R.id.pesan)
         pesan.text = pesanError
-        alertDialog.apply {
+        alertDialog?.apply {
             window?.setBackgroundDrawable(ColorDrawable(0))
             setCancelable(true)
             show()

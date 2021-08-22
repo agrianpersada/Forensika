@@ -8,7 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.project.forensika.R
 import com.project.forensika.model.CheckTools.Result
-import java.util.ArrayList
+import java.util.*
+import androidx.appcompat.widget.Toolbar
 
 class AplikasiActivity : AppCompatActivity() {
     private lateinit var imageViewTools: ImageView
@@ -28,6 +29,11 @@ class AplikasiActivity : AppCompatActivity() {
         textViewTool = findViewById(R.id.tv_tool)
         textViewDate = findViewById(R.id.tv_created_at)
         buttonOk = findViewById(R.id.btn_ok)
+//        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+//        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+        actionBar?.setDisplayShowHomeEnabled(true)
 
         aplikasiList?.let { aplikasis->
             if (!aplikasis.isNullOrEmpty()) {
@@ -52,5 +58,10 @@ class AplikasiActivity : AppCompatActivity() {
         buttonOk.setOnClickListener {
             finish()
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return super.onSupportNavigateUp()
     }
 }
